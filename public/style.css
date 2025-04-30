@@ -1,0 +1,147 @@
+.tile {
+    display: inline-block;
+    border: solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 140px;
+    margin: .5rem;
+    user-select: none;
+    vertical-align: middle;
+    height: 9rem;
+    width: 9rem;
+}
+
+.container {
+    display: flex;
+    flex-flow: row;
+    padding-right: 5vw;
+}
+
+.block {
+    margin-left: 5vw;
+    width: 50vw;
+    height: auto;
+}
+
+.outter {
+    width: 100vw;
+    height: 100vh;
+}
+
+.timeStat {
+    font-size: 100px;
+    font-family: "Jersey 25", sans-serif;
+    width: 400px;
+    height: 100px;
+    background-color: grey;
+}
+
+.stats {
+    width: 40vw;
+    height: 74vh;
+    background-color: gray;
+    border-radius: 10px;
+    margin-right: 2vw;
+    box-shadow: 30px;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: left;
+    padding: 2vw;
+    justify-content: center;
+}
+
+.title {
+    padding-top: 4vh;
+    padding-left: 6vw;
+    margin: 0px;
+    
+    color: red;
+    font-family: "Jersey 25", sans-serif;
+}
+
+.startButton {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    position: relative;
+    bottom: 4vh;
+    font-family: "Jersey 25", sans-serif;
+    color:red;
+    font-size: 200px;
+}
+
+.starsButton {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    position: absolute;
+    top: 8vh;
+    right: 1vw;
+    font-family: "Jersey 25", sans-serif;
+    color:red;
+    font-size: 100px;
+}
+
+.starButton {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    position: relative;
+    top: 1vh;
+    font-family: "Jersey 25", sans-serif;
+    color:red;
+    font-size: 100px;
+}
+
+.restartButton {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    position: relative;
+    bottom: 15vh;
+    font-family: "Jersey 25", sans-serif;
+    color:red;
+    font-size: x-large;
+}
+
+.score {
+    color: white;
+    font-size: larger;
+    position: relative;
+    bottom: 20vh;
+}
+
+.gameOver {
+    background-color: rgba(0, 0, 0, .95);
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* .tile {
+    padding: 1rem;
+    border: solid black;
+} */

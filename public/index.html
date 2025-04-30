@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <title>Hello, WS GAME.</title>
+</head>
+<body>
+    <div id="app">
+        <div class="outter" v-bind:style="{ backgroundColor: '#333333'}">
+            <h1 class="title">BOMB CONTROL!</h1>
+            <div class="container">
+                <div class="block">
+                    <div v-for="row, rowIndex in boardState">
+                        <div v-for="col, colIndex in row" v-bind:style="{ backgroundColor: '#FF' + ((235 - (Math.floor(col/4))).toString(16)) + ((235 - Math.floor(col/4)).toString(16)) }" class="tile"@click="move(rowIndex, colIndex)"> {{850-col}}</div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <button class="starsButton" @click="howToo()">?</button>
+                    <div class="timeStat" v-if="(howTo)">Don't let the bombs timeout! Click em!</div>
+                    <div class="timeStat" v-if="(!howTo)">Time:{{this.totalSeconds}}</div>
+                    <div class="timeStat" v-if="(!howTo)">Decreaser:{{this.otherSeconds}}</div>
+                    <div class="timeStat" v-if="(!howTo)">Level:{{this.playerLvl}}</div>
+                    <button class="startButton" v-if="(startBaton)" @click="setTime()">START</button>
+                    <div class="starButton" v-if="!(totalSeconds % 21) && !this.totalSeconds == 0" @click="halfTime()">1/2 OFF!!!</div>
+                </div>
+            </div>
+            <div v-if="(gameOver)" class="gameOver">
+                <img src="gameOverGif.gif" alt="gameOverGif">
+                <div class="score">SCORE: {{totalSeconds}}</div>
+                <button class="restartButton" @click="restart()">RESTART</button>
+            </div>
+            
+            
+            
+            <div>{{totalSeconds % 2}}</div>
+        </div>
+    
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
